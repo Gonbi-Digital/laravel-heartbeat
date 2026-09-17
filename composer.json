@@ -1,0 +1,39 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "gonbi-digital/laravel-heartbeat",
+    "description": "A health endpoint that answers when the database does not, and an ops page for the humans.",
+    "keywords": ["laravel", "health", "heartbeat", "uptime", "monitoring"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GonbiDigital\\Heartbeat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GonbiDigital\\Heartbeat\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["GonbiDigital\\Heartbeat\\HeartbeatServiceProvider"]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
